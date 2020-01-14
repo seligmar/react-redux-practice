@@ -1,0 +1,15 @@
+.imgCard {
+  text-align: center;
+  padding-bottom: 3%;
+  padding-top: 3%;
+  margin-left: 35%;
+  margin-right: 35%;
+  border-color: teal;
+  border-width: 5%;
+  border-style: solid;
+}
+
+.likes {
+  background-color: white;
+  color: red;
+}

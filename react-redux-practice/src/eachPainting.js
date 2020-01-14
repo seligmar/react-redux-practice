@@ -2,10 +2,10 @@ import React from 'react'
 
 const EachPainting = props => {
   return (
-    <div>
+    <div className='imgCard'>
       <img src={props.image} />
       <p>{props.title}</p>
-      <button>{props.likes}</button>
+      <button className='likes'>{props.likes} ♡</button>
     </div>
   )
 }

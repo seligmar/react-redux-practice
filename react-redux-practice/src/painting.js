@@ -18,3 +18,5 @@ const Painting = props => {
 }
 
 export default Painting
+
+// ♥  use this icon when likes increase
