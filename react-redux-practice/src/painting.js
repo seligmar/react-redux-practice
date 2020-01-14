@@ -2,7 +2,7 @@ import React from 'react'
 import eachPainting from './eachPainting'
 
 const Painting = props => {
-  const allPaintings = this.props.paintings
+  const allPaintings = props.paintings
   return (
     <div>
       {allPaintings.map(painting => (
