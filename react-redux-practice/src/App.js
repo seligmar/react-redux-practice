@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.css'
 import data from './data'
+import Painting from './painting'
 
 class App extends React.Component {
   state = {
@@ -12,8 +13,16 @@ class App extends React.Component {
     // imports paintings from data file
   }
 
+  paintingsToPass () {
+    this.componentDidMount()
+  }
+
   render () {
-    return <div>Does this work?</div>
+    return (
+      <div>
+        <Painting paintings={this.state.data}></Painting>
+      </div>
+    )
   }
 }
 
