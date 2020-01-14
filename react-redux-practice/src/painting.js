@@ -1,12 +1,17 @@
 import React from 'react'
-import eachPainting from './eachPainting'
+import EachPainting from './eachPainting'
 
 const Painting = props => {
   const allPaintings = props.paintings
   return (
     <div>
       {allPaintings.map(painting => (
-        <eachPainting key={painting.id} likes={painting.likes}></eachPainting>
+        <EachPainting
+          key={painting.id}
+          image={painting.image}
+          likes={painting.votes}
+          title={painting.title}
+        ></EachPainting>
       ))}
     </div>
   )
