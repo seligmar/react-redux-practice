@@ -9,7 +9,11 @@
   border-style: solid;
 }
 
-.likes {
+.white {
   background-color: white;
-  color: red;
+  /* color: red; */
+}
+
+.red {
+  background-color: red;
 }

@@ -13,10 +13,6 @@ class App extends React.Component {
     // imports paintings from data file
   }
 
-  paintingsToPass () {
-    this.componentDidMount()
-  }
-
   render () {
     return (
       <div>

@@ -1,13 +1,27 @@
 import React from 'react'
 
-const EachPainting = props => {
-  return (
-    <div className='imgCard'>
-      <img src={props.image} />
-      <p>{props.title}</p>
-      <button className='likes'>{props.likes} ♡</button>
-    </div>
-  )
+class EachPainting extends React.Component {
+  state = {
+    color: 'white'
+  }
+
+  changeStyle = () => {
+    this.setState({ color: 'red' })
+  }
+
+  render () {
+    return (
+      <div className='imgCard'>
+        <img src={this.props.image} alt={this.props.title} />
+        <p>{this.props.title}</p>
+        <button className={this.state.color} onClick={this.changeStyle}>
+          {this.props.likes} ♡
+        </button>
+      </div>
+    )
+  }
 }
+
+// on clidk the class of the like button should change to 'liked'
 
 export default EachPainting
