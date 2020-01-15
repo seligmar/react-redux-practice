@@ -1,17 +1,17 @@
 import React from 'react'
 import './App.css'
-import data from './data'
+// import data from '../data'
 import Painting from './painting'
 
 class App extends React.Component {
-  state = {
-    data: []
-  }
+  // state = {
+  //   data: []
+  // }
 
-  componentDidMount () {
-    this.setState({ data })
-    // imports paintings from data file
-  }
+  // componentDidMount () {
+  //   this.setState({ data })
+  //   // imports paintings from data file
+  // }
 
   render () {
     return (
