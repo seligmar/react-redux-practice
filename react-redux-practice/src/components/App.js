@@ -16,7 +16,7 @@ class App extends React.Component {
   render () {
     return (
       <div>
-        <Painting paintings={this.state.data}></Painting>
+        <Painting>{/* // paintings={this.state.data}> */}</Painting>
       </div>
     )
   }
