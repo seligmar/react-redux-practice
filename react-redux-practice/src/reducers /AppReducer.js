@@ -1,4 +1,4 @@
-const initialState = [
+const paintings = [
   {
     id: '59bd5a2acb4c274d74388a33',
     collecting_institution: '',
@@ -164,14 +164,34 @@ const initialState = [
   }
 ]
 
-export default (state = initialState, action) => {
+const upvote = id => {
+  const painting = paintings.find(paint => paint.id === id)
+  painting.votes++
+  // do I need the return? lets find out
+  return painting
+}
+
+const downvote = id => {
+  const painting = paintings.find(paint => paint.id === id)
+  painting.votes--
+  // do I need the return? lets find out
+  return painting
+}
+
+const deletePainting = id => {
+  const newPaintings = paintings.filter(paint => paint.id !== id)
+  // do I need the return? lets find out
+  return newPaintings
+}
+
+export default (state = paintings, action) => {
   switch (action.type) {
-    // case UPVOTE:
-    //   return state
-    // case DOWNVOTE:
-    //   return state
+    case UPVOTE:
+      return upvote(state)
+    case DOWNVOTE:
+      return downvote(state)
     // case DELETE:
-    //   return state
+    //   return deletePainting(state)
     default:
       return state
   }

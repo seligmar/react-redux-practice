@@ -16,7 +16,8 @@ class App extends React.Component {
 
   render () {
     // this shows the props for this component, which is banana: "potatoe"
-    // per the mapStateToProps function below. It works!
+    // per the mapStateToProps function below. It works! Also provided is dispatch,
+    // which is provided by connect
     console.log(this.props)
     return (
       <div>
@@ -29,7 +30,9 @@ class App extends React.Component {
 const mapStateToProps = state => ({
   // this gets the state from the store and returns the props, which are objects
   // if we put () before the {} it will return an object
-  banana: 'potatoe'
+  // anything written in here will provide props to the component
+  // banana: 'potatoe'
+  paintings: state.paintings
 })
 
 export default connect(mapStateToProps /* , mapDispatchToProps */)(App)
