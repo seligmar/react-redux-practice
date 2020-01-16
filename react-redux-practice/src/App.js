@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import './appNew.css'
 // import data from '../data'
 import Painting from './components/painting'
@@ -22,4 +23,6 @@ class App extends React.Component {
   }
 }
 
-export default App
+const mapStateToProps = state => ({})
+
+export default connect(mapStateToProps /* , mapDispatchToProps */)(App)

@@ -166,12 +166,12 @@ const initialState = [
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case UPVOTE:
-      return state
-    case DOWNVOTE:
-      return state
-    case DELETE:
-      return state
+    // case UPVOTE:
+    //   return state
+    // case DOWNVOTE:
+    //   return state
+    // case DELETE:
+    //   return state
     default:
       return state
   }
