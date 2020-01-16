@@ -1,7 +1,7 @@
 import React from 'react'
-import './App.css'
+import './appNew.css'
 // import data from '../data'
-import Painting from './painting'
+import Painting from './components/painting'
 
 class App extends React.Component {
   // state = {

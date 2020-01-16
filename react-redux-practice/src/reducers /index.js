@@ -1,8 +1,7 @@
 import { combineReducers } from 'redux'
 import AppReducer from './AppReducer'
-import eachPaintingReducer from './eachPaintingReducer'
 
-export default combineReducers({
-  AppReducer: AppReducer,
-  eachPaintingReducer: eachPaintingReducer
-})
+// good practice to include this combine reducers function in the event more reducers
+// are needed
+
+export default combineReducers({ AppReducer: AppReducer })

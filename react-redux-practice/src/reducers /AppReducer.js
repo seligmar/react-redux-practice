@@ -166,8 +166,12 @@ const initialState = [
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    // delete paintings
-    // add painting?
+    case UPVOTE:
+      return state
+    case DOWNVOTE:
+      return state
+    case DELETE:
+      return state
     default:
       return state
   }
