@@ -15,8 +15,20 @@ class EachPainting extends React.Component {
         <img src={this.props.image} alt={this.props.title} />
         <p>{this.props.title}</p>
         <p>Artist:{this.props.artist.name}</p>
+        <button
+          className='like-btn'
+          // onClick={this.changeStyle} upvote!
+        >
+          {this.props.likes}
+        </button>
         <button className={this.state.color} onClick={this.changeStyle}>
           {this.props.likes} ♡
+        </button>
+        <button
+          className='like-btn'
+          // onClick={this.changeStyle} delete!
+        >
+          Delete
         </button>
       </div>
     )

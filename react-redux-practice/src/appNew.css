@@ -17,3 +17,8 @@
 .red {
   background-color: rgb(226, 122, 157);
 }
+
+.like-btn {
+  background-color: crimson;
+  color: white;
+}

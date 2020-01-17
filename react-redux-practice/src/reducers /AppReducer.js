@@ -164,34 +164,35 @@ const paintings = [
   }
 ]
 
-const upvote = id => {
-  const painting = paintings.find(paint => paint.id === id)
-  painting.votes++
-  // do I need the return? lets find out
-  return painting
+const upvote = (paintings, action) => {
+  const id = action.payload
+  // map and spread operators!
+  return paintings.map(painting =>
+    painting.id === id ? { ...painting, votes: painting.votes-- } : painting
+  )
 }
 
-const downvote = id => {
-  const painting = paintings.find(paint => paint.id === id)
-  painting.votes--
-  // do I need the return? lets find out
-  return painting
+const downvote = (paintings, action) => {
+  const id = action.payload
+  return paintings.map(painting =>
+    painting.id === id ? { ...painting, votes: painting.votes-- } : painting
+  )
 }
 
-const deletePainting = id => {
+const deletePainting = (paintings, action) => {
+  const id = action.payload
   const newPaintings = paintings.filter(paint => paint.id !== id)
-  // do I need the return? lets find out
   return newPaintings
 }
 
 export default (state = paintings, action) => {
   switch (action.type) {
     case UPVOTE:
-      return upvote(state)
+      return upvote(state, action)
     case DOWNVOTE:
-      return downvote(state)
-    // case DELETE:
-    //   return deletePainting(state)
+      return downvote(state, action)
+    case DELETE:
+      return deletePainting(state, action)
     default:
       return state
   }
